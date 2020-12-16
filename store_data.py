@@ -245,7 +245,7 @@ def store_library(file, sample, gdl1, gdl2, spec, ref, thickness, gdl_age, comme
     #currents = np.unique(df_input[current_rounded])
 
     #Durchschnittliche Probendicke
-    df_input['sample_thickness[cm]'] = int(thickness) / 10
+    df_input['sample_thickness[cm]'] = float(thickness) / 10
     df_input['[mV] in [V]'] = 1000
     df_input[parameters] = gdl1 + gdl2 + '' + spec
 

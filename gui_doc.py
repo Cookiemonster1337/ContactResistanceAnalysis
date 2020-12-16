@@ -5,14 +5,14 @@ from store_data import store_library
 def import_data(frame, file):
     docu = tk.Toplevel(frame)
     docu.title("Documentation")
-    docu.geometry("{}x{}".format(600, 300))
-    docu.maxsize(600, 300)
+    docu.geometry("{}x{}".format(800, 300))
+    docu.maxsize(800, 300)
     docu.config(bg="lightgrey")
     docu.iconbitmap('zbt_logo.ico')
 
-    top = Frame(docu, bg='lightgrey', width=600, height=275)
+    top = Frame(docu, bg='lightgrey', width=800, height=275)
     top.grid_propagate(0)
-    bot = Frame(docu, bg='grey', width=600, height=25)
+    bot = Frame(docu, bg='grey', width=800, height=25)
     bot.grid_propagate(0)
 
     #docu.grid_rowconfigure(0, weight=1)

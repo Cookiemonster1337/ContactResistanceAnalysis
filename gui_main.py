@@ -13,7 +13,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 def get_file(frame):
     filename = \
-        tk.filedialog.askopenfilename(initialdir="C:/Users/",
+        tk.filedialog.askopenfilename(initialdir="C:/Users/Julian/Desktop/neu/Präsentation/Kontaktwiderstände",
                                       title="Select file",
                                       filetypes=(
                                                  ("all files", "*.*"),
@@ -112,7 +112,7 @@ def plotter2(dropdown_var, df, canvas, subf1, subf2,subf3, subf4, subf5):
     # ]
 
 
-    subf1.plot(pressures, df_res_flow_as_mean, linestyle='dashed', linewidth=2, marker='s', markersize=4, label=meas)
+    subf1.plot(pressures, df_res_contact_as_mean, linestyle='dashed', linewidth=2, marker='s', markersize=4, label=meas)
     subf1.legend(loc='upper left', bbox_to_anchor=(-0.28, 1.15), ncol=8, fontsize=8)
     subf1.set_xlabel('Anpressdruck [bar]', labelpad=10, fontdict=dict(fontsize=12, weight='bold'))
     subf1.set_ylabel('Durchgangswiderstand [mOhm*cm2]', labelpad=10, fontdict=dict(fontsize=12, weight='bold'))
@@ -138,7 +138,6 @@ def plotter2(dropdown_var, df, canvas, subf1, subf2,subf3, subf4, subf5):
 
     # subf6.table(cellText=table_data, colWidths=[.2, .5], loc='bottom',
     #                   bbox=[0.45, 0.75, 0.5, 0.2])
-
 
 
     canvas.draw()
@@ -200,7 +199,7 @@ def create_archive():
 
     #fig_ax1.table('test', cellColours='blue', bbox=[0.05, -0.1, 0.5, 0.2])
     fig_ax1.set_xlim([0, 20])
-    fig_ax1.set_ylim([0, 100])
+    fig_ax1.set_ylim([0, 400])
 
     fig_ax2 = fig.add_subplot(grid[1:6, 5:9])
     fig_ax2.set_title('Durchgangswiderstand @ 10bar', fontdict=dict(fontsize=10, weight='bold'))
